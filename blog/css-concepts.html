@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Relative vs Absolute vs Static vs Fixed Positioning. What do they mean? | Charlie Lee</title>
+    <link style="text/css" rel="stylesheet" href="../stylesheets/default.css">
+    <link style="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+  </head>
+
+  <body>
+
+    <header>
+      <a href="../index.html"><img src="../imgs/portrait.jpg" alt="Charlie Lee" id="portrait"></a>
+      <div id="headerbox">
+        <div id="name">
+          <a href="../index.html"><h1 id="myname">Charlie Lee</h1></a>
+          <ul id="sociallinks">
+            <li><a href="https://www.linkedin.com"><img src="../imgs/linkedin-logo.jpg" alt="LinkedIn Logo" class="logo"></a></li>
+            <li><a href="https://www.facebook.com"><img src="../imgs/facebook-logo.jpg" alt="Facebook Logo"class="logo"></a></li>
+            <li><a href="https://www.twitter.com"><img src="../imgs/twitter-logo.jpg" alt="Twitter Logo"class="logo"></a></li>
+            <li><a href="https://www.github.com"><img src="../imgs/github-logo.jpg" alt="GitHub Logo"class="logo"></a></li>
+            <li><a href="https://www.google.com"><img src="../imgs/google-logo.jpg" alt="Google+ Logo"class="logo"></a></li>
+          </ul>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li>|</li>
+            <li><a href="index.html">BLOG</a></li>
+            <li>|</li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li>|</li>
+            <li><a href="#">RESUME</a></li>
+            <li>|</li>
+            <li><a href="#">ABOUT ME</a></li>
+            <li>|</li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <article>
+        <h2>Relative vs Absolute vs Static vs Fixed Positioning. What do they mean?</h2>
+        <h3>Feb 5 2016</h3>
+        <!-- <img src="imgs/#" alt="Blog Post Image"> -->
+        <p>
+          CSS is a programming code that let's you format and style content in HTML files. The web browser will then render the CSS, displaying the HTML content onscreen using the rules from the CSS. For instance, if you have a headline in your HTML file, you can use CSS to turn it red, use a certain font, and change the size to make it as big as you want. <br><br>
+          You can also use CSS to reposition where the various HTML elements appear on the page. Using our headline example, you can center the text on the page and then move it a certain distance from the top of the screen. This is how you take a boring raw HTML page and turn it into an exciting, modern website. <br><br>
+          However, CSS positioning can be very fickle, especially when you want to organize multiple elements at once. By default, CSS will either place all your elements in a single line, either vertically (so that your screen has horizontal stripes running across it) horizontally (all of your elements will appear next to each other in a single row), or a combination of the two, where some elements are stacked on top of each other and some are side-by-side. However, these default cases won't produce a good-looking website. <br><br>
+          Instead, you need to position each element individually to arrange them properly. You can do this by setting the element's <code>position</code> attribute to one of four possibilities:<br>
+        </p>
+        <ul>
+          <li>Static - this is the default positioning for all elements. The element will appears as it normally would, according to the defaults. You usually won't need to set an object's position to this since it is set by default, but you may want to change an element's position back to static if it had a different attribute assigned already.</li>
+          <li>Relative - this lets you reposition an element relative to where it would have gone.  If an element would have appeared in a certain normally, you can move it up or down, left or right from that original spot.  Other elements will still act like it's in its original spot, so they will stay in their original place. This will leave a gap where the element was supposed to go originally.</li>
+          <li>Absolute - this lets you reposition an element within its parent, and all the other elements will act like it doesn't exist.  This is similar to Microsoft Word, where you set an object to appear above the text. You can move it wherever you want on the page, and the text or other objects aren't affected. If you move the page up or down, the object will move too - it is in a certain position on the page.</li>
+          <li>Fixed - this lets you place an object on a page, but it will stay there even if ou scroll the pag up and down.  It is useful for headers, footer, or sidebars, if you want those options to always be available to whomver is reading your page. All other objects will act like it doesn't exist, too.</li>
+        </ul>
+        <p>Hopefully this post lets you understand all of the different options for positioning an object on the page using CSS.  Good luck!</p>
+      </article>
+    </section>
+
+    <footer>
+      <h5>704-621-1412 | clcblee@gmail.com | PO Box ...</h5>
+    </footer>
+
+  </body>
+
+</html>
