@@ -1,69 +1,72 @@
 <!doctype html>
 <html>
 
-  <head>
-    <title>Charlie Lee</title>
-  </head>
+<head>
+  <title>Charlie Lee</title>
+  <link style="text/css" rel="stylesheet" href="stylesheets/default.css">
+</head>
 
-  <body>
-
+<body>
+  <div class="wrapper">
     <header>
-      <a href="index.html">
-        <img src="imgs/portrait.jpg" alt="Charlie Lee">
-        <h1>Charlie Lee</h1>
-      </a>
-      <ul>
-        <li><a href="https://www.linkedin.com"><img src="imgs/linkedin-logo.jpg" alt="LinkedIn Logo"></a></li>
-        <li><a href="https://www.facebook.com"><img src="imgs/facebook-logo.jpg" alt="Facebook Logo"></a></li>
-        <li><a href="https://www.twitter.com"><img src="imgs/twitter-logo.jpg" alt="Twitter Logo"></a></li>
-        <li><a href="https://www.github.com"><img src="imgs/github-logo.jpg" alt="GitHub Logo"></a></li>
-        <li><a href="https://www.google.com"><img src="imgs/google-logo.jpg" alt="Google+ Logo"></a></li>
-      </ul>
-      <hr>
-      <nav>
-        <ul>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="blog/index.html">BLOG</a></li>
-          <li><a href="#">PORTFOLIO</a></li>
-          <li><a href="#">RESUME</a></li>
-          <li><a href="#">ABOUT ME</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </ul>
-      </nav>
+      <a href="index.html"><img src="imgs/portrait.jpg" alt="Charlie Lee" id="portrait"></a>
+      <div id="headerbox">
+        <div id="name">
+          <a href="index.html"><h1 id="myname">Charlie Lee</h1></a>
+          <ul id="sociallinks">
+            <li><a href="https://www.linkedin.com"><img src="imgs/linkedin-logo.jpg" alt="LinkedIn Logo" class="logo"></a></li>
+            <li><a href="https://www.facebook.com"><img src="imgs/facebook-logo.jpg" alt="Facebook Logo"class="logo"></a></li>
+            <li><a href="https://www.twitter.com"><img src="imgs/twitter-logo.jpg" alt="Twitter Logo"class="logo"></a></li>
+            <li><a href="https://www.github.com"><img src="imgs/github-logo.jpg" alt="GitHub Logo"class="logo"></a></li>
+            <li><a href="https://www.google.com"><img src="imgs/google-logo.jpg" alt="Google+ Logo"class="logo"></a></li>
+          </ul>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li>|</li>
+            <li><a href="blog/index.html">BLOG</a></li>
+            <li>|</li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li>|</li>
+            <li><a href="#">RESUME</a></li>
+            <li>|</li>
+            <li><a href="#">ABOUT ME</a></li>
+            <li>|</li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <hr>
+    <section>
+      <article id="blogpreview">
+        <a href="blog/git.html">
+          <h2>Version Control as a Development Tool</h2>
+          <h3>Jan 23 2016</h3>
+        </a>
+        <!-- <img src="imgs/#" alt="Blog Post Image"> -->
+        <p>What are the benefits of version control?<br><br>Version control is a way to track your progress while you are editing files.  If you are editing multiple files...</p>
+        <a href="blog/git.html" class="continue">Continued...</a>
+        <h4><a href="#" class="readmore">READ FULL BLOG</a></h4>
+      </article>
 
-    <article>
-      <a href="blog/git.html">
-        <h2>Version Control as a Development Tool</h2>
-        <h3>Jan 23 2016</h3>
-      </a>
-      <img src="imgs/#" alt="Blog Post Image">
-      <div>
-        <p>What are the benefits of version control?</p>
-        <p>Version control is a way to track your progress while you are editing files.  If you are editing multiple files...</p>
-      </div>
-      <a href="blog/git.html">continued</a>
-      <h4><a href="#">Read full blog</a></h4>
-    </article>
+      <div id="vertdivide"></div>
 
-    <hr>
-
-    <article>
-      <a href="#"><h2>Featured Portfolio Entry</h2></a>
-      <img src="imgs/#" alt="Project Image">
-      <div><p>Portfolio entry intro text (partial)</p></div>
-      <a href="#">continued</a>
-      <h4><a href="#">Read about other projects</a></h4>
-    </article>
-
-    <hr>
+      <article id="portfoliopreview">
+        <a href="#"><h2>Featured Portfolio Entry</h2></a>
+        <!-- <img src="imgs/#" alt="Project Image"> -->
+        <p>Portfolio entry intro text Portfolio entry intro text Portfolio entry intro text Portfolio entry intro text Portfolio entry intro <br><br>text Portfolio entry intro text (partial)</p>
+        <a href="#" class="continue">Continued...</a>
+        <h4><a href="#" class="readmore">SEE MORE PROJECTS</a></h4>
+      </article>
+    </section>
 
     <footer>
       <h5>704-621-1412 | clcblee@gmail.com | PO Box ...</h5>
     </footer>
 
-  </body>
+  </div>
+</body>
 
 </html>
