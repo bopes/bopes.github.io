@@ -1,0 +1,33 @@
+/* * {
+  border: 1px dashed blue;
+}
+*/
+section {
+  display: block;
+
+}
+
+article {
+  display:block;
+  border-top: 1px solid black;
+  margin: 0 auto;
+  width: 60%;
+}
+
+article:first-child {
+  border: none;
+}
+
+h2{
+  display: block;
+  width: auto;
+}
+
+h3{
+  display: block;
+  text-align: right;
+}
+
+article h3 {
+  display: block;
+}

@@ -4,7 +4,8 @@
   font-family: Verdana, sans-serif;
   display: inline-block;
   position: relative;
-  /* border: 1px dashed blue; */
+  color: #000080;
+  /*border: 1px dashed blue;*/
 }
 
 head {
@@ -18,20 +19,32 @@ body {
 #wrapper {
   display: block;
   margin: 0 auto;
-  width: 500px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover {
+  color: #800000;
 }
 
 /* HEADER */
 
 header {
+  display: block;
   margin: 0 auto 20px auto;
+  text-align: center;
+  margin: 15px 0 -20px 0;
 }
 
 #headerbox {
-  display: inline;
-  position: absolute;
-  width: 500px;
-  margin: 41px 0px 41px 5px;
+  width: 550px;
+  margin: 41px 0px 41px 10px;
+  text-align: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 header ul {
@@ -41,7 +54,6 @@ header ul {
 
 #portrait {
   height:150px;
-  width: 150px;
 }
 
 #myname {
@@ -51,7 +63,7 @@ header ul {
 
 #sociallinks {
   padding: 0;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
 .logo {
@@ -63,6 +75,7 @@ header ul {
 nav {
   display: block;
   border-top: 1px solid black;
+  padding-top: 5px;
 }
 
 /* PAGE ENTRIES */
@@ -70,6 +83,7 @@ nav {
 section {
   display: block;
   margin: auto;
+  text-align: center;
 }
 
 article {
@@ -77,11 +91,12 @@ article {
   background-color: #fff;
   padding: 20px;
   margin: 0 20px;
+  text-align: left;
 }
 
 h2 {
   margin: 0 0 1px 0;
-
+  color: #800080;
 }
 
 h3 {
@@ -89,16 +104,32 @@ h3 {
   font-size: 1em;
   text-align: right;
   margin: 1px 0 1px 0;
+  color: #800080;
+}
+
+p{
+  color: #333;
 }
 
 .continue {
   display: block;
   text-align: right;
+  font-style: italic;
+  color: #800080;
+  text-decoration: underline;
 }
 
 h4 {
   display:block;
   text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+  font-style: italic;
+  font-size: 20px;
+  background-color: #ddd;
 }
 
 #blogpreview {
@@ -110,8 +141,8 @@ h4 {
 
 #vertdivide {
   background-color: black;
-  width: 1px;
-  height: 200px;
+  width: 1.25px;
+  height: 300px;
 }
 
 /* FOOTER */
