@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Arrays vs Hashes: When to use each | Charlie Lee</title>
+    <link style="text/css" rel="stylesheet" href="../stylesheets/default.css">
+    <link style="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+  </head>
+
+  <body>
+
+    <header>
+      <a href="../index.html"><img src="../imgs/portrait.jpg" alt="Charlie Lee" id="portrait"></a>
+      <div id="headerbox">
+        <div id="name">
+          <a href="../index.html"><h1 id="myname">Charlie Lee</h1></a>
+          <ul id="sociallinks">
+            <li><a href="https://www.linkedin.com"><img src="../imgs/linkedin-logo.jpg" alt="LinkedIn Logo" class="logo"></a></li>
+            <li><a href="https://www.facebook.com"><img src="../imgs/facebook-logo.jpg" alt="Facebook Logo"class="logo"></a></li>
+            <li><a href="https://www.twitter.com"><img src="../imgs/twitter-logo.jpg" alt="Twitter Logo"class="logo"></a></li>
+            <li><a href="https://www.github.com"><img src="../imgs/github-logo.jpg" alt="GitHub Logo"class="logo"></a></li>
+            <li><a href="https://www.google.com"><img src="../imgs/google-logo.jpg" alt="Google+ Logo"class="logo"></a></li>
+          </ul>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li>|</li>
+            <li><a href="index.html">BLOG</a></li>
+            <li>|</li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li>|</li>
+            <li><a href="#">RESUME</a></li>
+            <li>|</li>
+            <li><a href="#">ABOUT ME</a></li>
+            <li>|</li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <article>
+        <h2>Arrays vs Hashes: When to use each</h2>
+        <h3>Feb 14 2016</h3>
+        <!-- <img src="imgs/#" alt="Blog Post Image"> -->
+        <p>
+          Ruby makes it easy to define a variable so you can access it a later date. For instance, you can set up a local variable: <br><br>
+          <code>favorite_color = "Blue"</code> <br><br>
+          and have access to that value at any time in the future. <br><br>
+          But what if you want to store a list? Say you want to store your shopping list, with milk, eggs, and bread. You could save it as: <br><br>
+          <code>shopping_list = "Milk, eggs, bread"</code> <br><br>
+          but that would get cumbersome quickly, and you wouldn't be able to remove indvidual items easily. <br><br>
+          Instead, you could save it as an array or a hash. <br><br>
+          An array is a list of objects, arranged in a specific order. So our example would look like this: <br><br>
+          <code>shopping_list = ["Milk","Eggs","Bread"]</code><br><br>
+          With an array, each item is labeled according to its order, beginning with 0. So in our example, "Milk" is the 0th item, "Eggs" is the 1st item, and "Bread" is the second item.  If you want to refer to a specific item, you can specify the specifict item in the array. So: <br><br>
+          <code>shopping_list[0] = "Milk"</code><br>
+          <code>shopping_list[1] = "Eggs"</code><br>
+          <code>shopping_list[2] = "Bread"</code><br><br>
+          This makes is easier to remove one item from this list after you buy it, without affecting the other items. You can delete "Eggs" by removing that specific items from the list. <br><br>
+          Arrays are great for lists where you care about what items are included. <br><br>
+          But sometimes you care about more than that.  Say you are sending a thank you note to your best friend. You need their mailing address, which includes their street address, apartment number, city, state, and zip code. To store all this information, you would use a hash. <br><br>
+          A hash is a list of data point, organized into key-value pairs. In other words, a hash lets you establish what data points you need (called keys), and then assign a value to each of of those points. So we could create a hash like this: <br><br>
+          <code>best_friend = { address => "1234 Main St", city => "Austin", state => "TX", zip => "98765" }</code> <br><br>
+          This may seem like more work, but it lets you look up specific details really easily. Instead of remembering that "City" is fourth on the list, you can just look up the "City" key and find the associated value, like this: <br><br>
+          <code>best_friend["city"] = "Austin"</code><br><br> This also makes it easier for other people to understand and use your data, since they can just read it for themselves.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <h5>704-621-1412 | clcblee@gmail.com | PO Box ...</h5>
+    </footer>
+
+  </body>
+
+</html>
