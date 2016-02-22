@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Enumerables: The Group By Method | Charlie Lee</title>
+    <link style="text/css" rel="stylesheet" href="../stylesheets/default.css">
+    <link style="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+  </head>
+
+  <body>
+
+    <header>
+      <a href="../index.html"><img src="../imgs/portrait.jpg" alt="Charlie Lee" id="portrait"></a>
+      <div id="headerbox">
+        <div id="name">
+          <a href="../index.html"><h1 id="myname">Charlie Lee</h1></a>
+          <ul id="sociallinks">
+            <li><a href="https://www.linkedin.com/in/charlie-lee-399790102"><img src="../imgs/linkedin-logo.jpg" alt="LinkedIn Logo" class="logo"></a></li>
+            <li><a href="https://www.facebook.com/charlie.lee.501151"><img src="../imgs/facebook-logo.jpg" alt="Facebook Logo"class="logo"></a></li>
+            <li><a href="https://twitter.com/clcblee"><img src="../imgs/twitter-logo.jpg" alt="Twitter Logo"class="logo"></a></li>
+            <li><a href="https://github.com/bopes/"><img src="../imgs/github-logo.jpg" alt="GitHub Logo"class="logo"></a></li>
+            <li><a href="https://plus.google.com/108885204266780401982/posts"><img src="../imgs/google-logo.jpg" alt="Google+ Logo"class="logo"></a></li>
+          </ul>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li>|</li>
+            <li><a href="index.html">BLOG</a></li>
+            <li>|</li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li>|</li>
+            <li><a href="#">RESUME</a></li>
+            <li>|</li>
+            <li><a href="#">ABOUT ME</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <article>
+        <h2>Enumerables: The Group By Method</h2>
+        <h3>Feb 22 2016</h3>
+        <!-- <img src="imgs/#" alt="Blog Post Image"> -->
+        <p>
+          Any data container in Ruby that utilizes the #each method can then be set to use the full set of Enumberable methods. These methods are stored under the Enumerable module, where they can be accessed by arrays and hashes, as well as any other containers you may need or create. This way, the methods are only created once and can be accessed in a number of ways (truly, this is DRY). <br><br>
+          One Enumerable is the #group_by method, shown here: <br><br>
+          <code>  sample_array.group_by {|i| ..code block.. }</code> <br><br>
+          This method will take an array and create a hash that organizes the array's elements according to the results of the code block. For instance, <br><br>
+          <code>
+            array = [1,2,3,4,5] <br>
+            array.group_by {|i| i%2 } <br>
+            #=> {0=>[2,4], 1=>[1,3,5]}
+          </code> <br><br>
+          In this example, our code block can return one of two values - either <code>0</code>, if <code>i</code> is evenly divisible by 2, or <code>1</code>, if it isn't.  Our #group_by method creates a new hash creates a new key for each value that the code block returns, and then sorts each array element according to which value the code block returned for it. <br><br>
+          This is really useful for reorganizing your data to get a more detailed structure around a specific data point, and can be very valuable as your data gets more and more complex.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <h5>clcblee@gmail.com | PO Box ...</h5>
+    </footer>
+
+  </body>
+
+</html>
