@@ -1,0 +1,21 @@
+article {
+  border-top: 1px solid black;
+  margin: 0 auto;
+  width: 60%;
+}
+
+article:first-child {
+  border: none;
+}
+
+h3{
+  text-align: right;
+}
+
+article li {
+  margin-top: 20px;
+}
+
+li:first-child {
+  margin-top: 0;
+}
