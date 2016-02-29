@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Ruby Classes: How and Why | Charlie Lee</title>
+    <link style="text/css" rel="stylesheet" href="../stylesheets/default.css">
+    <link style="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+  </head>
+
+  <body>
+
+    <header>
+      <a href="../index.html"><img src="../imgs/portrait.jpg" alt="Charlie Lee" id="portrait"></a>
+      <div id="headerbox">
+        <div id="name">
+          <a href="../index.html"><h1 id="myname">Charlie Lee</h1></a>
+          <ul id="sociallinks">
+            <li><a href="https://www.linkedin.com/in/charlie-lee-399790102"><img src="../imgs/linkedin-logo.jpg" alt="LinkedIn Logo" class="logo"></a></li>
+            <li><a href="https://www.facebook.com/charlie.lee.501151"><img src="../imgs/facebook-logo.jpg" alt="Facebook Logo"class="logo"></a></li>
+            <li><a href="https://twitter.com/clcblee"><img src="../imgs/twitter-logo.jpg" alt="Twitter Logo"class="logo"></a></li>
+            <li><a href="https://github.com/bopes/"><img src="../imgs/github-logo.jpg" alt="GitHub Logo"class="logo"></a></li>
+            <li><a href="https://plus.google.com/108885204266780401982/posts"><img src="../imgs/google-logo.jpg" alt="Google+ Logo"class="logo"></a></li>
+          </ul>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li>|</li>
+            <li><a href="index.html">BLOG</a></li>
+            <li>|</li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li>|</li>
+            <li><a href="#">RESUME</a></li>
+            <li>|</li>
+            <li><a href="../about.html">ABOUT ME</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <article>
+        <h2>Ruby Classes: How and Why</h2>
+        <h3>Feb 29 2016</h3>
+        <!-- <img src="imgs/#" alt="Blog Post Image"> -->
+        <p>
+          Arrays and Hashes are great for storing individual sets of data, but what if you need to store different versions of the same thing? For instance, if you want to track all of your favorite movies, you could create an individual hash for each containing the title, year, director, and lead actor, but that would take forever. Instead, you can use a Class to store this information, which gives you the access of a hash but also the flexibility to create your own.  <br><br>
+          To create a Class, you first need to define it with its initial arguments: <br><br>
+          <code>class Movie<br>
+            initialize(title,year,director,actor) <br>
+            end <br>
+          end</code> <br><br>
+          This means that we have now created a new class called "Movie", and that whenever we log a new movie, it will have a title, year, director and actor. To make these data points generally available for use within the class, we will define them as instance variables: <br><br>
+          <code>class Movie<br>
+            initialize(title,year,director,actor) <br>
+            @title = title <br>
+            @year = year <br>
+            @director = director <br>
+            @actor = actor <br>
+            end <br>
+          end</code> <br><br>
+          These 'instance variables', determined with the prefix @, are variables that can be at any time within the class, regardless of which movie (or instance of the class) you are using. These variables are not available outside of the class on their own, meaning other methods cannot find them, without a reader or writer method such as attr_reader, attr_writer, or attr_accessor, shown here: <br><br>
+          <code>class Movie<br>
+            attr_reader :title, :year, :director, :actor <br>
+            initialize(title,year,director,actor) <br>
+            @title = title <br>
+            @year = year <br>
+            @director = director <br>
+            @actor = actor <br>
+            end <br>
+          end</code> <br><br>
+          Now these instance variables can be called by other methods outside of the class. <br><br>
+          You can also create methods specific to this class. For instance, if I wanted to create a shorthand way to view the title, year, and director for any given movie, I can create an instance method within the Movie class that will only work for my movies. But it will still work for any movie I put into my class. Check it out: <br><br>
+          <code>class Movie<br>
+            attr_reader :title, :year, :director, :actor <br>
+            initialize(title,year,director,actor) <br>
+            @title = title <br>
+            @year = year <br>
+            @director = director <br>
+            @actor = actor <br>
+            end <br>
+            def overview <br>
+              puts "#{@title}, #{year}. Directed by {@director}. Stars {@actor}." <br>
+            end <br>
+          end</code> <br><br>
+          This new overview method will now be available for any movies I put into this class, or any movies I enter in the future. <br><br>
+          Classes are a great way to store multiple versions of the same thing, where you can define the precise methods and variables types you will need. You only have to set the class up once, and it will be very simple to add new instances over time without having to recode or define the same structure or methods over again.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <h5>clcblee@gmail.com | PO Box ...</h5>
+    </footer>
+
+  </body>
+
+</html>
