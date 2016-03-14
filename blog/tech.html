@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Dynamic vs Static Languages</title>
+    <link style="text/css" rel="stylesheet" href="../stylesheets/default.css">
+    <link style="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+  </head>
+
+  <body>
+
+    <header>
+      <a href="../index.html"><img src="../imgs/portrait.jpg" alt="Charlie Lee" id="portrait"></a>
+      <div id="headerbox">
+        <div id="name">
+          <a href="../index.html"><h1 id="myname">Charlie Lee</h1></a>
+          <ul id="sociallinks">
+            <li><a href="https://www.linkedin.com/in/charlie-lee-399790102"><img src="../imgs/linkedin-logo.jpg" alt="LinkedIn Logo" class="logo"></a></li>
+            <li><a href="https://www.facebook.com/charlie.lee.501151"><img src="../imgs/facebook-logo.jpg" alt="Facebook Logo"class="logo"></a></li>
+            <li><a href="https://twitter.com/clcblee"><img src="../imgs/twitter-logo.jpg" alt="Twitter Logo"class="logo"></a></li>
+            <li><a href="https://github.com/bopes/"><img src="../imgs/github-logo.jpg" alt="GitHub Logo"class="logo"></a></li>
+            <li><a href="https://plus.google.com/108885204266780401982/posts"><img src="../imgs/google-logo.jpg" alt="Google+ Logo"class="logo"></a></li>
+          </ul>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li>|</li>
+            <li><a href="index.html">BLOG</a></li>
+            <li>|</li>
+            <li><a href="../portfolio/index.html">PORTFOLIO</a></li>
+            <li>|</li>
+            <li><a href="#">RESUME</a></li>
+            <li>|</li>
+            <li><a href="../about.html">ABOUT ME</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <article>
+        <h2>Dynamic vs Static Languages</h2>
+        <h3>Mar 14 2016</h3>
+        <!-- <img src="imgs/#" alt="Blog Post Image"> -->
+        <p>
+          All coding languages are either dynamically or statically typed. The difference is determined by how that language handles variables. <br><br>
+          A dynamic language lets variables be redefined to any type at any given point - the variable type is dynamic. Ruby and JavaScript both fit this description. Here's how it would look: <br><br>
+          <code>num = 10<br></code>
+          <code>num = "ten"</code><br><br>
+          Here you can see that the first line sets the variable equal to an integer, but the second sets it equal to a string. <br><br>
+          In static languages, this isn't allowed. You must declare your variable and variable type before defining it, and the variable must equal that datatype. If it is set to another type, it will return an error. <br><br>
+          There are advantages and disadvantages to both types. <br><br>
+          Dynamic languages are faster to type and produce the most readable code. However, by not enforcing variable data types, it is possible to accidentally assign incorrect values to variables or create new, mistyped variables on the fly. To fix these errors you have to run the code and find any runtime errors. This testing takes longer and is harder to do, resulting in more errors slipping through to production. Generally speaking, the benefits of dynamic languages make them better suiting for prototyping and shorter development cycles.<br><br>
+          On the other hand, static languages can find these errors for you when you compile the code. This makes testing considerably easier. The downside is that it takes longer write, as you have to declare your variables in advance. These languages are better for larger, more precise applications, as they have more robust testing capabilities and better system performance.<br><br>
+          Because of the best practices found in each, it is typically easier for experienced static-language coders to switch to dynamic-languages than vice versa. But for your application, you should start with whatever language you know best, and then go from there.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <h5>clcblee@gmail.com | PO Box ...</h5>
+    </footer>
+
+  </body>
+
+</html>
