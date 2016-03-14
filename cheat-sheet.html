@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+  <title>DBC Cheatsheet</title>
+  <link rel="stylesheet" style="text/css" href="stylesheets/cheat-sheet.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <header>
+    <h1>DBC Cheatsheet</h1>
+    <ul>
+      <li>SQL</li>
+      <li>Topic 2</li>
+      <li>Topic 3</li>
+    </ul>
+  </header>
+  <article>
+
+    <h2>Structured Query Language</h2>
+
+    <section class="primary">
+      <h3>Manipulation</h3>
+
+      <section class="topic">
+        <h4>Create Table</h4>
+        <code><span class="command">CREATE TABLE</span> table_name (column1_name data_type, column2_name data_type, etc.);</code>
+        <p>This creates a new table in your database. Note: you can include as many columns as you want.</p>
+        <!-- <ul class="sublist">
+          <li>CREATE TABLE - command that creates the table</li>
+          <li>table_name - what your new table will be named</li>
+          <li>column1_name - what the first column in the table will be named</li>
+          <li>data_type - the data type for that column</li>
+        </ul> -->
+      </section>
+
+      <section class="topic">
+        <h4>Insert</h4>
+        <code><span class="command">INSERT INTO</span> table (column1, column2, etc.) <span class="command">VALUES</span> (value1, value2, etc.);</code>
+        <p>This inserts a row into the specified table.</p>
+        <!-- <ul class="sublist">
+          <li>INSERT INTO - command that inserts your new row</li>
+          <li>table - which table to insert into</li>
+          <li>column1, column2, etc. - which columns in the table you will be filling in</li>
+          <li>VALUES - command that precedes new data</li>
+          <li>value1, value2, etc. - the new data to be inserted. The order corresponds to column1, column2, etc.</li>
+        </ul> -->
+      </section>
+
+      <section class="topic">
+        <h4>Select</h4>
+        <code><span class="command">SELECT</span> column1, column2, etc. <span class="command">FROM</span> table;</code>
+        <p>This pulls data from a table.</p>
+        <!-- <ul class="sublist">
+          <li>SELECT - command to pull data</li>
+          <li>table - which table to pull from</li>
+          <li>column1, column2, etc. - which columns you want to pull. You can choose all columns with "*"</li>
+          <li>FROM - command that chooses which table to pull from</li>
+          <li>table - which table to pull from</li>
+        </ul> -->
+      </section>
+
+      <section class="topic">
+        <h4>Update</h4>
+        <code><span class="command">UPDATE</span> table <span class="command">SET</span> column1 = new_value <span class="command">WHERE</span> column2 = value;</code>
+        <p>This updates data in a table. You can change the data in a column for all rows meeting certain criteria.</p>
+        <!-- <ul class="sublist">
+          <li>UPDATE - command to update data</li>
+          <li>table - which table to update</li>
+          <li>SET - command that precedes the new data</li>
+          <li>column1 - the column that will be changed</li>
+          <li>new_value - the value it will be changed to</li>
+          <li>WHERE - command that finds the rows meeting certain criteria</li>
+          <li>column2 - the column containing the search criteria</li>
+          <li>value2 - the search criteria</li>
+        </ul> -->
+      </section>
+
+      <section class="topic">
+        <h4>Alter Table</h4>
+        <code><span class="command">ALTER TABLE</span> table <span class="command">ADD COLUMN</span> new_column data_type;</code>
+        <p>Modify the columns in a table.</p>
+      </section>
+
+      <section class="topic">
+        <h4>Delete From</h4>
+        <code><span class="command">DELETE FROM</span> table <span class="command">WHERE</span> column <span class="command">IS</span> criteria;</code>
+        <p>Delete rows in a table</p>
+      </section>
+    </section>
+
+    <section class="primary">
+      <h3>Queries</h3>
+      <section class="topic">
+        <h4>Select Distinct</h4>
+        <code><span class="command">SELECT DISTINCT</span> column <span class="command">FROM</span> table;</code>
+        <p>Select every unique value in a column.</p>
+      </section>
+
+      <section class="topic">
+        <h4>Like</h4>
+        <code><span class="command">SELECT FROM</span> table <span class="command">WHERE</span> column <span class="command">LIKE</span> criteria;</code>
+        <p>Return rows where data in the specified column matches the criteria. Note:<br>
+          "_" is a search wildcard ("Se_en" returns "Seven" and "Se7en"). <br> "%" is a appending wildcard ("d%" returns "dog", "%h" returns "fish", "%a%" returns "cat").
+
+        </p>
+      </section>
+    </section>
+
+  </article>
+
+  <footer>
+  </footer>
+</body>
+</html>

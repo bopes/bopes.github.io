@@ -1,0 +1,117 @@
+/* BOILERPLATE *//*
+
+
+* {
+  border: 1px dashed blue;
+}
+
+
+*//* COLOR BANK *//*
+
+header blue:  0b3c5d
+bright blue:  328cc1
+almost black: 1d2731
+gold:         d9b310
+
+*/
+
+
+
+body {
+  font-family: Roboto;
+  background-color: #fff;
+  margin: 0;
+}
+
+/* HEADER */
+
+header{
+  background-color: #0b3c5d;
+  border-bottom: 1px solid #1d2731;
+  margin: 0;
+  text-align: center;
+  font-size: 1.75em;
+}
+
+header h1{
+  color: #328cc1;
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+header ul{
+  margin: 0;
+  padding: 0 0 6px 0;
+}
+
+header li {
+  display: inline;
+  margin: 0 15px;
+  font-size: .75em;
+  color: #d9b310;
+}
+
+/* BODY */
+
+article {
+  width: 60%;
+  margin: 0 auto;
+  color: #1d2731;
+  letter-spacing: .5px;
+  word-spacing: 2px;
+}
+
+article h2 {
+  font-size: 2em;
+}
+
+.topic {
+  margin: 0 0 2.5em 0;
+}
+
+article h3 {
+  color: #328cc1;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+article h4 {
+  margin: 0;
+}
+
+article ul {
+  padding: 0 0 0 15px;
+}
+
+
+article code {
+  display: block;
+  color: white;
+  background-color: #0b3c5d;
+  margin-top: .5em;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+article p {
+  margin:.5em 0;
+}
+
+.command {
+  color: #d9b310;
+}
+
+ul li{
+  margin-top: .5em;
+}
+
+/* FOOTER */
+
+footer {
+  height: 30px;
+  color: #d9b310;
+  background-color: #1d2731;
+  margin-top: 5em;
+  border-top: 1px solid #0b3c5d;
+  border-bottom: 3px solid #0b3c5d;
+}
