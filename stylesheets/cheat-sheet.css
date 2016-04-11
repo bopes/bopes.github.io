@@ -38,7 +38,12 @@ header li {
   font-size: .75em;
   color: #d9b310; }
 
+a {
+  color: #d9b310;
+  text-decoration: none; }
 
+a:hover {
+  color: white; }
 
 
 /* BODY */
@@ -96,6 +101,8 @@ h4 {
 .command {
   color: #d9b310; }
 
+.class {
+  color: #328cc1; }
 
 
 

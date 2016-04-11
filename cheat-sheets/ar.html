@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+  <title>DBC Cheatsheet</title>
+  <link rel="stylesheet" style="text/css" href="../stylesheets/cheat-sheet.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <header>
+    <h1>DBC Cheatsheet</h1>
+    <ul>
+      <li><a href="sql.html">SQL</a></li>
+      <li><a href="ar.html">ActiveRecord</a></li>
+      <li><a href="#"></a>Topic 3</li>
+    </ul>
+  </header>
+  <article>
+
+    <h2>Structured Query Language</h2>
+
+    <table>
+
+      <tr>
+        <td id="class_methods">
+          <h3>Class Methods</h3>
+
+          <p>These are chainable, but can only be called on a class or ActiveRecord_Relation (which are like arrays). So they can't be chained in just any order. <br><br>
+          For instance, #count returns an integer and #pluck returns an array, so they should be the last methods called.</p><br>
+
+          <section class="topic" id="view_all">
+            <h4>View All</h4>
+            <code><span class="class">Class</span><span class="command">.all</span></code>
+            <p>Returns ActiveRecord_Relation containing all instances of the class</p>
+          </section>
+
+          <section class="topic" id="where">
+            <h4>Where</h4>
+            <code><span class="class">Class</span><span class="command">.where(</span>column: search_value<span class="command">)</span></code>
+            <p>Returns ActiveRecord_Relation containing all instances meeting the criteria</p>
+          </section>
+
+          <section class="topic" id="where_mult">
+            <h4>Where (Multiple Criteria)</h4>
+            <code>
+              <span class="class">Class</span><span class="command">.where(</span>{column1: value1, column2: value2}<span class="command">)</span><br>
+              OR <br>
+              <span class="class">Class</span><span class="command">.where(</span>"column1: ? AND column2: ?", value1, value2<span class="command">)</span>
+            </code>
+            <p>Returns ActiveRecord_Relation containing all instances meeting all the multiple criteria</p>
+          </section>
+
+          <section class="topic" id="order">
+            <h4>Order</h4>
+            <code><span class="class">Class</span><span class="command">.order(</span>column: :asc/:desc<span class="command">)</span></code>
+            <p>Returns an ordered ActiveRecord_Relation</p>
+          </section>
+
+          <section class="topic" id="count">
+            <h4>Count</h4>
+            <code><span class="class">Class</span><span class="command">.count</span></code>
+            <p>Returns integer count of elements in class</p>
+          </section>
+
+          <section class="topic" id="pluck">
+            <h4>Pluck</h4>
+            <code><span class="class">Class</span><span class="command">.pluck(</span>:column1, :column2, etc.<span class="command">)</span></code>
+            <p>Returns an array of arrays containing these values for every instance of class</p>
+          </section>
+
+          <section class="topic" id="first">
+            <h4>First</h4>
+            <code><span class="class">Class</span><span class="command">.first</span></code>
+            <p>Returns the first instance of the class</p>
+          </section>
+
+          <section class="topic" id="find">
+            <h4>Find</h4>
+            <code><span class="class">Class</span><span class="command">.find(</span>#id<span class="command">)</span></code>
+            <p>Returns the instance of the class with the given #id</p>
+          </section>
+
+          <section class="topic" id="find_by">
+            <h4>Find By</h4>
+            <code><span class="class">Class</span><span class="command">.find_by(</span>column: search_value<span class="command">)</span></code>
+            <p>Returns the first instance of the class that matches the search criteria</p>
+          </section>
+        </td>
+
+        <td id="creating_records">
+          <h3>Creating Records</h3>
+
+          <section class="topic" id="new">
+            <h4>New</h4>
+            <code><span class="class">Class</span><span class="command">.new(</span>column1: value1, column2: value2, etc.<span class="command">)</span></code>
+            <p>Instantiates a new instance of the class. This is not saved in the database. It will not have an #id until it's been saved, so don't give it one. Returns the new instance.</p>
+          </section>
+
+          <section class="topic" id="persisted">
+            <h4>Persisted?</h4>
+            <code><span class="class">instance</span><span class="command">.persisted?</span></code>
+            <p>Returns boolean announcing if the instance has been persisted in the database.</p>
+          </section>
+
+          <section class="topic" id="save">
+            <h4>Save</h4>
+            <code><span class="class">instance</span><span class="command">.save</span></code>
+            <p>Saves the instance to the database and assigns it an #id. Returns boolean if the instance saved sucessfully.</p>
+          </section>
+
+          <section class="topic" id="create">
+            <h4>Create</h4>
+            <code><span class="class">Class</span><span class="command">.create(</span>column1: value1, column2: value2, etc.<span class="command">)</span></code>
+            <p>Instantiates and saves the new instance simultaneously. Returns the new instance.</p>
+          </section>
+
+          <section class="topic" id="create_mult">
+            <h4>Create Multiple</h4>
+            <code><span class="class">Class</span><span class="command">.create [</span>{column1: value1}, {column1: value2}<span class="command">]</span></code>
+            <p>Creates multiple instances at once. Returns an array of the new instances.</p>
+          </section>
+
+          <section class="topic" id="find_or_initialize_by">
+            <h4>Find or Initialize By</h4>
+            <code><span class="class">Class</span><span class="command">.find_or_initialize_by(</span>column: value<span class="command">)</span></code>
+            <p>Looks for the criteria in the database. If not found, it creates a new instance. Returns the found or initialized instance. Does not save the initialized instance.</p>
+          </section>
+
+          <section class="topic" id="find_or_create_by">
+            <h4>Find or Create By</h4>
+            <code><span class="class">Class</span><span class="command">.find_or_create_by(</span>column: value<span class="command">)</span></code>
+            <p>Looks for the criteria in the database. If not found, it creates a new instance. Returns the found or initialized instance. New instances are saved directly to the database.</p>
+          </section>
+        </td>
+      </tr>
+
+      <tr>
+        <td id="aggregate_functions">
+          <h3>Aggregate Functions</h3>
+
+          <section class="topic" id="count">
+            <h4>Count</h4>
+            <code><span class="command">SELECT COUNT(</span>column<span class="command">) FROM</span> table;</code>
+            <p>Return a count of rows with column =/= NULL. To see all rows, set column = * </p>
+          </section>
+        </td>
+
+        <td id="multiple_tables">
+          <h3>Multiple Tables</h3>
+
+          <section class="topic" id="primary_key">
+            <h4>Primary Key</h4>
+            <code><span class="command">CREATE TABLE</span> table_name (id <span class="command">INTEGER PRIMARY KEY</span>, column2_name data_type2, etc.);</code>
+            <p>The primary key acts as the id value for the record. Each value in this column will be unique, and no value will be NULL.</p>
+          </section>
+        </td>
+      </tr>
+
+    </table>
+
+  </article>
+
+  <footer>
+  </footer>
+</body>
+</html>
