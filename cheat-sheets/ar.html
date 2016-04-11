@@ -36,8 +36,7 @@
 
           <section class="topic" id="where">
             <h4>Where</h4>
-            <code><span class="class">Class</span><span class="command">.where(</span>column: search_value<span class="command
-              ">)</span></code>
+            <code><span class="class">Class</span><span class="command">.where(</span>column: search_value<span class="command">)</span></code>
             <p>Returns ActiveRecord_Relation containing all instances meeting the criteria</p>
           </section>
 
@@ -65,8 +64,7 @@
 
           <section class="topic" id="pluck">
             <h4>Pluck</h4>
-            <code><span class="class">Class</span><span class="command">.pluck(</span>:column1, :column2, etc.<span class="command
-              ">)</span></code>
+            <code><span class="class">Class</span><span class="command">.pluck(</span>:column1, :column2, etc.<span class="command">)</span></code>
             <p>Returns an array of arrays containing these values for every instance of class</p>
           </section>
 
@@ -78,30 +76,60 @@
 
           <section class="topic" id="find">
             <h4>Find</h4>
-            <code><span class="class">Class</span><span class="command">.find(</span>#id<span class="command
-              ">)</span></code>
+            <code><span class="class">Class</span><span class="command">.find(</span>#id<span class="command">)</span></code>
             <p>Returns the instance of the class with the given #id</p>
           </section>
 
           <section class="topic" id="find_by">
             <h4>Find By</h4>
-            <code><span class="class">Class</span><span class="command">.find_by(</span>column: search_value<span class="command
-              ">)</span></code>
+            <code><span class="class">Class</span><span class="command">.find_by(</span>column: search_value<span class="command">)</span></code>
             <p>Returns the first instance of the class that matches the search criteria</p>
           </section>
         </td>
 
-        <td id="queries">
-          <h3>Queries</h3>
+        <td id="creating_records">
+          <h3>Creating Records</h3>
 
-          <section class="topic" id="like">
-            <h4>Like</h4>
-            <code><span class="command">SELECT</span> column <span class="command">FROM</span> table <span class="command">WHERE</span> column <span class="command">LIKE</span> criteria;</code>
-            <p>
-              Return rows where data in the specified column matches the criteria.<br>
-              '_' is a search wildcard ('Se_en' returns 'Seven' and 'Se7en'). <br>
-              '%' is a append wildcard ('d%' returns 'dog,' '%h' returns 'fish,' '%a%' returns 'cat').
-            </p>
+          <section class="topic" id="new">
+            <h4>New</h4>
+            <code><span class="class">Class</span><span class="command">.new(</span>column1: value1, column2: value2, etc.<span class="command">)</span></code>
+            <p>Instantiates a new instance of the class. This is not saved in the database. It will not have an #id until it's been saved, so don't give it one. Returns the new instance.</p>
+          </section>
+
+          <section class="topic" id="persisted">
+            <h4>Persisted?</h4>
+            <code><span class="class">instance</span><span class="command">.persisted?</span></code>
+            <p>Returns boolean announcing if the instance has been persisted in the database.</p>
+          </section>
+
+          <section class="topic" id="save">
+            <h4>Save</h4>
+            <code><span class="class">instance</span><span class="command">.save</span></code>
+            <p>Saves the instance to the database and assigns it an #id. Returns boolean if the instance saved sucessfully.</p>
+          </section>
+
+          <section class="topic" id="create">
+            <h4>Create</h4>
+            <code><span class="class">Class</span><span class="command">.create(</span>column1: value1, column2: value2, etc.<span class="command">)</span></code>
+            <p>Instantiates and saves the new instance simultaneously. Returns the new instance.</p>
+          </section>
+
+          <section class="topic" id="create_mult">
+            <h4>Create Multiple</h4>
+            <code><span class="class">Class</span><span class="command">.create [</span>{column1: value1}, {column1: value2}<span class="command">]</span></code>
+            <p>Creates multiple instances at once. Returns an array of the new instances.</p>
+          </section>
+
+          <section class="topic" id="find_or_initialize_by">
+            <h4>Find or Initialize By</h4>
+            <code><span class="class">Class</span><span class="command">.find_or_initialize_by(</span>column: value<span class="command">)</span></code>
+            <p>Looks for the criteria in the database. If not found, it creates a new instance. Returns the found or initialized instance. Does not save the initialized instance.</p>
+          </section>
+
+          <section class="topic" id="find_or_create_by">
+            <h4>Find or Create By</h4>
+            <code><span class="class">Class</span><span class="command">.find_or_create_by(</span>column: value<span class="command">)</span></code>
+            <p>Looks for the criteria in the database. If not found, it creates a new instance. Returns the found or initialized instance. New instances are saved directly to the database.</p>
           </section>
         </td>
       </tr>
