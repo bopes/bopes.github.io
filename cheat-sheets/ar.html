@@ -33,6 +33,62 @@
             <code><span class="class">Class</span><span class="command">.all</span></code>
             <p>Returns ActiveRecord_Relation containing all instances of the class</p>
           </section>
+
+          <section class="topic" id="where">
+            <h4>Where</h4>
+            <code><span class="class">Class</span><span class="command">.where(</span>column: search_value<span class="command
+              ">)</span></code>
+            <p>Returns ActiveRecord_Relation containing all instances meeting the criteria</p>
+          </section>
+
+          <section class="topic" id="where_mult">
+            <h4>Where (Multiple Criteria)</h4>
+            <code>
+              <span class="class">Class</span><span class="command">.where(</span>{column1: value1, column2: value2}<span class="command">)</span><br>
+              OR <br>
+              <span class="class">Class</span><span class="command">.where(</span>"column1: ? AND column2: ?", value1, value2<span class="command">)</span>
+            </code>
+            <p>Returns ActiveRecord_Relation containing all instances meeting all the multiple criteria</p>
+          </section>
+
+          <section class="topic" id="order">
+            <h4>Order</h4>
+            <code><span class="class">Class</span><span class="command">.order(</span>column: :asc/:desc<span class="command">)</span></code>
+            <p>Returns an ordered ActiveRecord_Relation</p>
+          </section>
+
+          <section class="topic" id="count">
+            <h4>Count</h4>
+            <code><span class="class">Class</span><span class="command">.count</span></code>
+            <p>Returns integer count of elements in class</p>
+          </section>
+
+          <section class="topic" id="pluck">
+            <h4>Pluck</h4>
+            <code><span class="class">Class</span><span class="command">.pluck(</span>:column1, :column2, etc.<span class="command
+              ">)</span></code>
+            <p>Returns an array of arrays containing these values for every instance of class</p>
+          </section>
+
+          <section class="topic" id="first">
+            <h4>First</h4>
+            <code><span class="class">Class</span><span class="command">.first</span></code>
+            <p>Returns the first instance of the class</p>
+          </section>
+
+          <section class="topic" id="find">
+            <h4>Find</h4>
+            <code><span class="class">Class</span><span class="command">.find(</span>#id<span class="command
+              ">)</span></code>
+            <p>Returns the instance of the class with the given #id</p>
+          </section>
+
+          <section class="topic" id="find_by">
+            <h4>Find By</h4>
+            <code><span class="class">Class</span><span class="command">.find_by(</span>column: search_value<span class="command
+              ">)</span></code>
+            <p>Returns the first instance of the class that matches the search criteria</p>
+          </section>
         </td>
 
         <td id="queries">
