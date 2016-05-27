@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
 <head>
-  <title>ActiveRecord | DBC Cheatsheet</title>
+  <title>ActiveRecord | DB Cheatsheet</title>
   <link rel="stylesheet" style="text/css" href="../stylesheets/cheat-sheet.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
   <header>
-    <h1>DBC Cheatsheet</h1>
+    <h1>DB Cheatsheet</h1>
     <ul>
       <li><a href="sql.html">SQL</a></li>
       <li><a href="activerecord.html">ActiveRecord</a></li>
-      <li><a href="#"></a>Topic 3</li>
+      <li><a href="../index.html">Home</a></li>
     </ul>
   </header>
   <article>
@@ -132,28 +132,6 @@
             <h4>Find or Create By</h4>
             <code><span class="class">Class</span><span class="command">.find_or_create_by(</span>column: value<span class="command">)</span></code>
             <p>Looks for the criteria in the database. If not found, it creates a new instance. Returns the found or initialized instance. New instances are saved directly to the database.</p>
-          </section>
-        </td>
-      </tr>
-
-      <tr>
-        <td id="aggregate_functions">
-          <h3>Aggregate Functions</h3>
-
-          <section class="topic" id="count">
-            <h4>Count</h4>
-            <code><span class="command">SELECT COUNT(</span>column<span class="command">) FROM</span> table;</code>
-            <p>Return a count of rows with column =/= NULL. To see all rows, set column = * </p>
-          </section>
-        </td>
-
-        <td id="multiple_tables">
-          <h3>Multiple Tables</h3>
-
-          <section class="topic" id="primary_key">
-            <h4>Primary Key</h4>
-            <code><span class="command">CREATE TABLE</span> table_name (id <span class="command">INTEGER PRIMARY KEY</span>, column2_name data_type2, etc.);</code>
-            <p>The primary key acts as the id value for the record. Each value in this column will be unique, and no value will be NULL.</p>
           </section>
         </td>
       </tr>
