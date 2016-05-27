@@ -10,7 +10,7 @@ gold:         d9b310
 body {
   font-family: Roboto;
   background-color: #fff;
-  margin: 0; }
+  margin: 0;}
 
 
 
@@ -54,6 +54,12 @@ article {
   color: #1d2731;
   letter-spacing: .5px;
   word-spacing: 2px; }
+
+article a {
+  color: #328cc1; }
+
+article a:hover {
+  color: #0b3c5d; }
 
 h2 {
   font-size: 2em; }
